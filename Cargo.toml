@@ -1,0 +1,3 @@
+[workspace]
+resolver = "3"
+members = ["expodify2", "expodify2-cli", "expodify2-gui/src-tauri"]
