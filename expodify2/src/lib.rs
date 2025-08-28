@@ -2,7 +2,7 @@ use std::error::Error;
 use std::fmt::Display;
 use std::{fmt, fs, io};
 use std::ffi::OsStr;
-use std::path::{Path, PathBuf};
+use std::path::Path;
 use audiotags::Tag;
 use log::{debug, info, warn};
 use rand::distr::Alphanumeric;
