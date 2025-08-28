@@ -1,2 +1,2 @@
 These tests use "Walk Through the Park" by [TrackTribe](https://www.youtube.com/channel/UCALNf7YM2pEGJvIHf1zxftA).
-I do not own the song and the license of this repository does not apply to these files.
+I do not own the song and the license of this repository does not apply to files under the `resources` folder.
