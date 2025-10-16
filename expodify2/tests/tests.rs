@@ -1,4 +1,5 @@
 use std::fs;
+use expodify2::Extractor;
 
 const DESTINATION: &str = "/tmp/expodify2-test";
 
@@ -10,7 +11,13 @@ fn extract_media() {
         fs::create_dir(DESTINATION).unwrap();
     }
 
-    expodify2::extract("tests/resources/normal", DESTINATION).unwrap();
+    Extractor::builder()
+        .source("tests/resources/normal")
+        .destination(DESTINATION)
+        .build()
+        .unwrap()
+        .extract()
+        .unwrap();
 
     assert_eq!(fs::read_dir(DESTINATION).unwrap().count(), 2);
 
@@ -25,7 +32,13 @@ fn duplicates() {
         fs::create_dir(DESTINATION).unwrap();
     }
 
-    expodify2::extract("tests/resources/duplicates", DESTINATION).unwrap();
+    Extractor::builder()
+        .source("tests/resources/duplicates")
+        .destination(DESTINATION)
+        .build()
+        .unwrap()
+        .extract()
+        .unwrap();
 
     assert_eq!(fs::read_dir(DESTINATION).unwrap().count(), 4);
 
